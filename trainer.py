@@ -10,6 +10,7 @@ from sklearn.model_selection import KFold
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 import matplotlib.pyplot as plt
 import pickle
+import time
 
 # Feature extraction helper functions
 def moving_average(data, window_size):
@@ -181,7 +182,7 @@ class GNNLSTMModel(nn.Module):
         return F.log_softmax(x, dim=1), hidden
 
 # Function to save the model and relevant information
-def save_model_and_info(model, metrics, iteration):
+def save_model_and_info(model, optimizer, metrics, iteration):
     model_filename = f"fNIRS_GNNLSTM_Model_{iteration}.pth"
     metrics_filename = f"fNIRS_ConfMatrix_Model_{iteration}.png"
     metrics_txt_filename = f"fNIRS_Metrics_Model_{iteration}.txt"
@@ -214,10 +215,18 @@ def save_model_and_info(model, metrics, iteration):
 # Training loop with cross-validation and evaluation metrics
 def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
     for iteration in range(1, num_iterations + 1):
+        print(f"\nStarting iteration {iteration}...")
+        start_time = time.time()
+        
         kf = KFold(n_splits=k_folds, shuffle=True)
         all_metrics = {'accuracy': [], 'precision': [], 'recall': [], 'f1_score': [], 'y_true': [], 'y_pred': []}
 
+        fold_index = 0
         for train_index, test_index in kf.split(data_list):
+            fold_index += 1
+            print(f"\n  Starting fold {fold_index} of iteration {iteration}...")
+            fold_start_time = time.time()
+            
             train_data = [data_list[i] for i in train_index]
             test_data = [data_list[i] for i in test_index]
             train_loader = DataLoader(train_data, batch_size=1, shuffle=True)
@@ -227,6 +236,9 @@ def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
             criterion = nn.CrossEntropyLoss()
 
             for epoch in range(10):  # Number of epochs
+                print(f"    Starting epoch {epoch + 1} of fold {fold_index}...")
+                epoch_start_time = time.time()
+                
                 model.train()
                 for data in train_loader:
                     optimizer.zero_grad()
@@ -234,6 +246,9 @@ def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
                     loss = criterion(out, data.y)
                     loss.backward()
                     optimizer.step()
+                
+                epoch_end_time = time.time()
+                print(f"    Finished epoch {epoch + 1} of fold {fold_index} in {epoch_end_time - epoch_start_time:.2f} seconds.")
 
             model.eval()
             y_true = []
@@ -257,6 +272,9 @@ def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
             all_metrics['y_true'].extend(y_true)
             all_metrics['y_pred'].extend(y_pred)
 
+            fold_end_time = time.time()
+            print(f"  Finished fold {fold_index} of iteration {iteration} in {fold_end_time - fold_start_time:.2f} seconds.")
+
         avg_metrics = {key: np.mean(values) if key not in ['y_true', 'y_pred'] else values
                        for key, values in all_metrics.items()}
         avg_metrics_std = {key: np.std(values) if key not in ['y_true', 'y_pred'] else values
@@ -266,7 +284,10 @@ def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
             if metric not in ['y_true', 'y_pred']:
                 print(f"Iteration {iteration} - {metric}: {values:.4f} ± {avg_metrics_std[metric]:.4f}")
         
-        save_model_and_info(model, avg_metrics, iteration)
+        save_model_and_info(model, optimizer, avg_metrics, iteration)
+        
+        end_time = time.time()
+        print(f"Finished iteration {iteration} in {end_time - start_time:.2f} seconds.")
 
 # Train and evaluate the model
 train_and_evaluate(model, data_list)
