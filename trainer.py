@@ -145,7 +145,7 @@ for t in range(len(processed_data)):
 # DataLoader
 loader = DataLoader(data_list, batch_size=1, shuffle=True)
 
-# GNN-LSTM Model
+# Model Definition
 class GNNLSTMModel(nn.Module):
     def __init__(self, num_node_features, hidden_dim, num_classes):
         super(GNNLSTMModel, self).__init__()
@@ -156,8 +156,9 @@ class GNNLSTMModel(nn.Module):
         self.lstm = nn.LSTM(hidden_dim, hidden_dim, batch_first=True)
         self.fc = nn.Linear(hidden_dim, num_classes)
         self.dropout = nn.Dropout(0.5)
+        self.hidden_dim = hidden_dim  # Store hidden_dim for LSTM initialization
 
-    def forward(self, data, hidden):
+    def forward(self, data, hidden=None):
         x, edge_index, batch = data.x, data.edge_index, data.batch
         x = self.conv1(x, edge_index)
         x = self.bn1(x)
@@ -169,15 +170,20 @@ class GNNLSTMModel(nn.Module):
         x = self.dropout(x)
         x = global_mean_pool(x, batch)  # Pooling to get graph-level representation
 
-        # Reshape for LSTM
+        # Initialize hidden state for LSTM if not provided
+        if hidden is None:
+            batch_size = batch.max().item() + 1
+            hidden = (torch.zeros(1, batch_size, self.hidden_dim),
+                      torch.zeros(1, batch_size, self.hidden_dim))
+
         x = x.view(batch.max().item() + 1, -1, x.size(1))
-        
+
         # LSTM to capture temporal dependencies
         x, hidden = self.lstm(x, hidden)
-        
+
         # Only take the output of the last LSTM cell
         x = x[:, -1, :]
-        
+
         x = self.fc(x)
         return F.log_softmax(x, dim=1), hidden
 
@@ -187,10 +193,10 @@ def save_model_and_info(model, optimizer, metrics, iteration):
     metrics_filename = f"fNIRS_ConfMatrix_Model_{iteration}.png"
     metrics_txt_filename = f"fNIRS_Metrics_Model_{iteration}.txt"
     model_info_filename = f"fNIRS_Model_Info_Model_{iteration}.pkl"
-    
+
     # Save the model
     torch.save(model.state_dict(), model_filename)
-    
+
     # Save the metrics plot silently
     fig, ax = plt.subplots()
     conf_matrix = confusion_matrix(metrics['y_true'], metrics['y_pred'])
@@ -200,12 +206,12 @@ def save_model_and_info(model, optimizer, metrics, iteration):
     plt.ylabel('True')
     plt.savefig(metrics_filename)
     plt.close(fig)
-    
+
     # Save the metrics data to a text file
     with open(metrics_txt_filename, 'w') as f:
         for key, value in metrics.items():
             f.write(f"{key}: {value}\n")
-    
+
     # Save all other relevant information
     with open(model_info_filename, 'wb') as f:
         pickle.dump({'model_state_dict': model.state_dict(),
@@ -217,7 +223,7 @@ def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
     for iteration in range(1, num_iterations + 1):
         print(f"\nStarting iteration {iteration}...")
         start_time = time.time()
-        
+
         kf = KFold(n_splits=k_folds, shuffle=True)
         all_metrics = {'accuracy': [], 'precision': [], 'recall': [], 'f1_score': [], 'y_true': [], 'y_pred': []}
 
@@ -226,7 +232,7 @@ def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
             fold_index += 1
             print(f"\n  Starting fold {fold_index} of iteration {iteration}...")
             fold_start_time = time.time()
-            
+
             train_data = [data_list[i] for i in train_index]
             test_data = [data_list[i] for i in test_index]
             train_loader = DataLoader(train_data, batch_size=1, shuffle=True)
@@ -238,15 +244,17 @@ def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
             for epoch in range(10):  # Number of epochs
                 print(f"    Starting epoch {epoch + 1} of fold {fold_index}...")
                 epoch_start_time = time.time()
-                
+
                 model.train()
                 for data in train_loader:
                     optimizer.zero_grad()
+                    hidden = (torch.zeros(1, data.batch.max().item() + 1, model.hidden_dim),
+                              torch.zeros(1, data.batch.max().item() + 1, model.hidden_dim))  # Initialize hidden state
                     out, hidden = model(data, hidden)
                     loss = criterion(out, data.y)
                     loss.backward()
                     optimizer.step()
-                
+
                 epoch_end_time = time.time()
                 print(f"    Finished epoch {epoch + 1} of fold {fold_index} in {epoch_end_time - epoch_start_time:.2f} seconds.")
 
@@ -255,6 +263,8 @@ def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
             y_pred = []
             with torch.no_grad():
                 for data in test_loader:
+                    hidden = (torch.zeros(1, data.batch.max().item() + 1, model.hidden_dim),
+                              torch.zeros(1, data.batch.max().item() + 1, model.hidden_dim))  # Initialize hidden state
                     out, hidden = model(data, hidden)
                     y_true.append(data.y.item())
                     y_pred.append(out.argmax(dim=1).item())
@@ -279,15 +289,16 @@ def train_and_evaluate(model, data_list, k_folds=5, num_iterations=3):
                        for key, values in all_metrics.items()}
         avg_metrics_std = {key: np.std(values) if key not in ['y_true', 'y_pred'] else values
                            for key, values in all_metrics.items()}
-        
+
         for metric, values in avg_metrics.items():
             if metric not in ['y_true', 'y_pred']:
                 print(f"Iteration {iteration} - {metric}: {values:.4f} ± {avg_metrics_std[metric]:.4f}")
-        
+
         save_model_and_info(model, optimizer, avg_metrics, iteration)
-        
+
         end_time = time.time()
         print(f"Finished iteration {iteration} in {end_time - start_time:.2f} seconds.")
 
 # Train and evaluate the model
+model = GNNLSTMModel(num_node_features=processed_data.shape[1], hidden_dim=64, num_classes=5)
 train_and_evaluate(model, data_list)
