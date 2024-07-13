@@ -9,7 +9,7 @@ Here’s the magic:
 - Double Derivative
 - Variance
 - Standard Deviation
-- FFT
+- Fast Fourier Transform
 - Energy
 - Entropy
 
