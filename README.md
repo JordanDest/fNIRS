@@ -1,4 +1,4 @@
-# Brain Scanner fNIRS Project"
+# Brain Scanner from a Bicycle Helmet
 ## This project uses Functional Near-Infrared Spectroscopy (fNIRS) and a machine learning model to classify neural responses during different physical activities. It's all about strapping a bunch of sensors to a bike helmet and letting machine learning do its thing in brain scanner land.
 ### Machine Learning Model
 
