@@ -1,0 +1,532 @@
+"c:/Code/ML Practice/brainy.py"
+
+Starting iteration 1...
+
+  Starting fold 1 of iteration 1...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 1 | Loss: 1.4715 | Duration: 46.14s
+    Epoch 2 of fold 1 | Loss: 1.3842 | Duration: 45.73s
+    Epoch 3 of fold 1 | Loss: 1.3835 | Duration: 46.40s
+    Epoch 4 of fold 1 | Loss: 1.3835 | Duration: 46.44s
+    Epoch 5 of fold 1 | Loss: 1.3833 | Duration: 46.34s
+    Epoch 6 of fold 1 | Loss: 1.3835 | Duration: 48.33s
+    Epoch 7 of fold 1 | Loss: 1.3834 | Duration: 46.52s
+    Epoch 8 of fold 1 | Loss: 1.3833 | Duration: 46.32s
+    Epoch 9 of fold 1 | Loss: 1.3835 | Duration: 46.61s
+    Epoch 10 of fold 1 | Loss: 1.3836 | Duration: 47.11s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 1 completed | Accuracy: 0.2466 | Duration: 470.63s
+
+  Starting fold 2 of iteration 1...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 2 | Loss: 1.3840 | Duration: 45.46s
+    Epoch 2 of fold 2 | Loss: 1.3836 | Duration: 45.61s
+    Epoch 3 of fold 2 | Loss: 1.3837 | Duration: 46.25s
+    Epoch 4 of fold 2 | Loss: 1.3831 | Duration: 47.26s
+    Epoch 5 of fold 2 | Loss: 1.3832 | Duration: 45.63s
+    Epoch 6 of fold 2 | Loss: 1.3830 | Duration: 45.64s
+    Epoch 7 of fold 2 | Loss: 1.3833 | Duration: 45.62s
+    Epoch 8 of fold 2 | Loss: 1.3833 | Duration: 45.22s
+    Epoch 9 of fold 2 | Loss: 1.3830 | Duration: 46.16s
+    Epoch 10 of fold 2 | Loss: 1.3829 | Duration: 46.22s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 2 completed | Accuracy: 0.2638 | Duration: 463.53s
+
+  Starting fold 3 of iteration 1...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 3 | Loss: 1.3810 | Duration: 45.23s
+    Epoch 2 of fold 3 | Loss: 1.3805 | Duration: 45.22s
+    Epoch 3 of fold 3 | Loss: 1.3803 | Duration: 45.37s
+    Epoch 4 of fold 3 | Loss: 1.3804 | Duration: 45.15s
+    Epoch 5 of fold 3 | Loss: 1.3801 | Duration: 45.37s
+    Epoch 6 of fold 3 | Loss: 1.3801 | Duration: 46.10s
+    Epoch 7 of fold 3 | Loss: 1.3797 | Duration: 45.86s
+    Epoch 8 of fold 3 | Loss: 1.3799 | Duration: 45.29s
+    Epoch 9 of fold 3 | Loss: 1.3801 | Duration: 45.26s
+    Epoch 10 of fold 3 | Loss: 1.3799 | Duration: 45.57s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 3 completed | Accuracy: 0.2631 | Duration: 458.88s
+
+  Starting fold 4 of iteration 1...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 4 | Loss: 1.3837 | Duration: 45.37s
+    Epoch 2 of fold 4 | Loss: 1.3833 | Duration: 46.00s
+    Epoch 3 of fold 4 | Loss: 1.3832 | Duration: 46.05s
+    Epoch 4 of fold 4 | Loss: 1.3829 | Duration: 45.27s
+    Epoch 5 of fold 4 | Loss: 1.3829 | Duration: 45.37s
+    Epoch 6 of fold 4 | Loss: 1.3828 | Duration: 45.30s
+    Epoch 7 of fold 4 | Loss: 1.3828 | Duration: 45.69s
+    Epoch 8 of fold 4 | Loss: 1.3829 | Duration: 45.38s
+    Epoch 9 of fold 4 | Loss: 1.3830 | Duration: 45.94s
+    Epoch 10 of fold 4 | Loss: 1.3830 | Duration: 45.84s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 4 completed | Accuracy: 0.2832 | Duration: 460.67s
+
+  Starting fold 5 of iteration 1...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 5 | Loss: 1.3771 | Duration: 45.40s
+    Epoch 2 of fold 5 | Loss: 1.3771 | Duration: 45.30s
+    Epoch 3 of fold 5 | Loss: 1.3770 | Duration: 45.31s
+    Epoch 4 of fold 5 | Loss: 1.3771 | Duration: 45.30s
+    Epoch 5 of fold 5 | Loss: 1.3772 | Duration: 46.11s
+    Epoch 6 of fold 5 | Loss: 1.3767 | Duration: 47.01s
+    Epoch 7 of fold 5 | Loss: 1.3772 | Duration: 45.66s
+    Epoch 8 of fold 5 | Loss: 1.3771 | Duration: 45.24s
+    Epoch 9 of fold 5 | Loss: 1.3769 | Duration: 45.33s
+    Epoch 10 of fold 5 | Loss: 1.3770 | Duration: 45.87s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 5 completed | Accuracy: 0.2482 | Duration: 461.03s
+Iteration 1 - accuracy: 0.2610 ± 0.0133
+Iteration 1 - precision: 0.1321 ± 0.0339
+Iteration 1 - recall: 0.2610 ± 0.0133
+Iteration 1 - f1_score: 0.1381 ± 0.0183
+Model saved as fNIRS_GNNLSTM_Model_1.pth
+Confusion matrix saved as fNIRS_ConfMatrix_Model_1.png
+Metrics saved as fNIRS_Metrics_Model_1.txt
+
+Iteration 1 completed in 2315.67 seconds.
+
+
+Starting iteration 2...
+
+  Starting fold 1 of iteration 2...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 1 | Loss: 1.3810 | Duration: 45.75s
+    Epoch 2 of fold 1 | Loss: 1.3807 | Duration: 46.28s
+    Epoch 3 of fold 1 | Loss: 1.3802 | Duration: 46.31s
+    Epoch 4 of fold 1 | Loss: 1.3804 | Duration: 45.69s
+    Epoch 5 of fold 1 | Loss: 1.3803 | Duration: 45.52s
+    Epoch 6 of fold 1 | Loss: 1.3802 | Duration: 45.60s
+    Epoch 7 of fold 1 | Loss: 1.3805 | Duration: 45.44s
+    Epoch 8 of fold 1 | Loss: 1.3802 | Duration: 46.24s
+    Epoch 9 of fold 1 | Loss: 1.3806 | Duration: 46.21s
+    Epoch 10 of fold 1 | Loss: 1.3802 | Duration: 46.21s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 1 completed | Accuracy: 0.2991 | Duration: 463.71s
+
+  Starting fold 2 of iteration 2...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 2 | Loss: 1.3816 | Duration: 45.31s
+    Epoch 2 of fold 2 | Loss: 1.3815 | Duration: 45.51s
+    Epoch 3 of fold 2 | Loss: 1.3812 | Duration: 45.52s
+    Epoch 4 of fold 2 | Loss: 1.3811 | Duration: 45.72s
+    Epoch 5 of fold 2 | Loss: 1.3813 | Duration: 46.25s
+    Epoch 6 of fold 2 | Loss: 1.3811 | Duration: 46.30s
+    Epoch 7 of fold 2 | Loss: 1.3812 | Duration: 45.62s
+    Epoch 8 of fold 2 | Loss: 1.3812 | Duration: 45.52s
+    Epoch 9 of fold 2 | Loss: 1.3811 | Duration: 45.66s
+    Epoch 10 of fold 2 | Loss: 1.3812 | Duration: 45.62s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 2 completed | Accuracy: 0.2696 | Duration: 461.51s
+
+  Starting fold 3 of iteration 2...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 3 | Loss: 1.3835 | Duration: 46.54s
+    Epoch 2 of fold 3 | Loss: 1.3833 | Duration: 46.17s
+    Epoch 3 of fold 3 | Loss: 1.3832 | Duration: 45.64s
+    Epoch 4 of fold 3 | Loss: 1.3832 | Duration: 45.59s
+    Epoch 5 of fold 3 | Loss: 1.3834 | Duration: 45.50s
+    Epoch 6 of fold 3 | Loss: 1.3833 | Duration: 45.52s
+    Epoch 7 of fold 3 | Loss: 1.3833 | Duration: 45.66s
+    Epoch 8 of fold 3 | Loss: 1.3831 | Duration: 46.17s
+    Epoch 9 of fold 3 | Loss: 1.3831 | Duration: 46.33s
+    Epoch 10 of fold 3 | Loss: 1.3831 | Duration: 45.69s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 3 completed | Accuracy: 0.3055 | Duration: 463.25s
+
+  Starting fold 4 of iteration 2...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 4 | Loss: 1.3835 | Duration: 45.53s
+    Epoch 2 of fold 4 | Loss: 1.3833 | Duration: 45.49s
+    Epoch 3 of fold 4 | Loss: 1.3832 | Duration: 45.45s
+    Epoch 4 of fold 4 | Loss: 1.3832 | Duration: 46.08s
+    Epoch 5 of fold 4 | Loss: 1.3832 | Duration: 46.25s
+    Epoch 6 of fold 4 | Loss: 1.3831 | Duration: 45.57s
+    Epoch 7 of fold 4 | Loss: 1.3829 | Duration: 45.46s
+    Epoch 8 of fold 4 | Loss: 1.3830 | Duration: 46.01s
+    Epoch 9 of fold 4 | Loss: 1.3832 | Duration: 45.52s
+    Epoch 10 of fold 4 | Loss: 1.3830 | Duration: 45.74s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 4 completed | Accuracy: 0.2351 | Duration: 461.55s
+
+  Starting fold 5 of iteration 2...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 5 | Loss: 1.3810 | Duration: 46.06s
+    Epoch 2 of fold 5 | Loss: 1.3809 | Duration: 46.31s
+    Epoch 3 of fold 5 | Loss: 1.3809 | Duration: 45.70s
+    Epoch 4 of fold 5 | Loss: 1.3808 | Duration: 45.64s
+    Epoch 5 of fold 5 | Loss: 1.3808 | Duration: 45.49s
+    Epoch 6 of fold 5 | Loss: 1.3806 | Duration: 45.61s
+    Epoch 7 of fold 5 | Loss: 1.3808 | Duration: 46.14s
+    Epoch 8 of fold 5 | Loss: 1.3809 | Duration: 46.18s
+    Epoch 9 of fold 5 | Loss: 1.3806 | Duration: 45.66s
+    Epoch 10 of fold 5 | Loss: 1.3808 | Duration: 45.45s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 5 completed | Accuracy: 0.2799 | Duration: 462.71s
+Iteration 2 - accuracy: 0.2778 ± 0.0250
+Iteration 2 - precision: 0.2143 ± 0.0609
+Iteration 2 - recall: 0.2778 ± 0.0250
+Iteration 2 - f1_score: 0.1615 ± 0.0199
+Model saved as fNIRS_GNNLSTM_Model_2.pth
+Confusion matrix saved as fNIRS_ConfMatrix_Model_2.png
+Metrics saved as fNIRS_Metrics_Model_2.txt
+
+Iteration 2 completed in 2313.04 seconds.
+
+
+Starting iteration 3...
+
+  Starting fold 1 of iteration 3...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 1 | Loss: 1.3828 | Duration: 45.43s
+    Epoch 2 of fold 1 | Loss: 1.3824 | Duration: 45.39s
+    Epoch 3 of fold 1 | Loss: 1.3823 | Duration: 45.51s
+    Epoch 4 of fold 1 | Loss: 1.3823 | Duration: 46.18s
+    Epoch 5 of fold 1 | Loss: 1.3824 | Duration: 46.10s
+    Epoch 6 of fold 1 | Loss: 1.3822 | Duration: 45.41s
+    Epoch 7 of fold 1 | Loss: 1.3822 | Duration: 45.35s
+    Epoch 8 of fold 1 | Loss: 1.3821 | Duration: 45.48s
+    Epoch 9 of fold 1 | Loss: 1.3821 | Duration: 45.50s
+    Epoch 10 of fold 1 | Loss: 1.3821 | Duration: 46.42s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 1 completed | Accuracy: 0.2804 | Duration: 461.22s
+
+  Starting fold 2 of iteration 3...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 2 | Loss: 1.3834 | Duration: 46.09s
+    Epoch 2 of fold 2 | Loss: 1.3831 | Duration: 45.42s
+    Epoch 3 of fold 2 | Loss: 1.3832 | Duration: 45.44s
+    Epoch 4 of fold 2 | Loss: 1.3831 | Duration: 45.38s
+    Epoch 5 of fold 2 | Loss: 1.3832 | Duration: 45.36s
+    Epoch 6 of fold 2 | Loss: 1.3831 | Duration: 45.48s
+    Epoch 7 of fold 2 | Loss: 1.3832 | Duration: 46.07s
+    Epoch 8 of fold 2 | Loss: 1.3831 | Duration: 46.16s
+    Epoch 9 of fold 2 | Loss: 1.3831 | Duration: 45.48s
+    Epoch 10 of fold 2 | Loss: 1.3831 | Duration: 45.57s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 2 completed | Accuracy: 0.3098 | Duration: 460.93s
+
+  Starting fold 3 of iteration 3...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 3 | Loss: 1.3790 | Duration: 45.27s
+    Epoch 2 of fold 3 | Loss: 1.3787 | Duration: 45.39s
+    Epoch 3 of fold 3 | Loss: 1.3789 | Duration: 45.86s
+    Epoch 4 of fold 3 | Loss: 1.3788 | Duration: 46.08s
+    Epoch 5 of fold 3 | Loss: 1.3787 | Duration: 45.39s
+    Epoch 6 of fold 3 | Loss: 1.3787 | Duration: 45.40s
+    Epoch 7 of fold 3 | Loss: 1.3786 | Duration: 45.92s
+    Epoch 8 of fold 3 | Loss: 1.3785 | Duration: 45.70s
+    Epoch 9 of fold 3 | Loss: 1.3787 | Duration: 45.18s
+    Epoch 10 of fold 3 | Loss: 1.3785 | Duration: 45.53s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 3 completed | Accuracy: 0.2890 | Duration: 460.12s
+
+  Starting fold 4 of iteration 3...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 4 | Loss: 1.3832 | Duration: 45.51s
+    Epoch 2 of fold 4 | Loss: 1.3829 | Duration: 45.01s
+    Epoch 3 of fold 4 | Loss: 1.3829 | Duration: 45.04s
+    Epoch 4 of fold 4 | Loss: 1.3827 | Duration: 44.95s
+    Epoch 5 of fold 4 | Loss: 1.3828 | Duration: 45.03s
+    Epoch 6 of fold 4 | Loss: 1.3827 | Duration: 44.96s
+    Epoch 7 of fold 4 | Loss: 1.3828 | Duration: 45.83s
+    Epoch 8 of fold 4 | Loss: 1.3828 | Duration: 45.46s
+    Epoch 9 of fold 4 | Loss: 1.3827 | Duration: 45.12s
+    Epoch 10 of fold 4 | Loss: 1.3827 | Duration: 44.91s
+  Fold 4 completed | Accuracy: 0.2890 | Duration: 456.23s
+
+  Starting fold 5 of iteration 3...
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch_geometric\deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+    Epoch 1 of fold 5 | Loss: 1.3786 | Duration: 44.96s
+    Epoch 2 of fold 5 | Loss: 1.3786 | Duration: 44.98s
+    Epoch 3 of fold 5 | Loss: 1.3784 | Duration: 45.90s
+    Epoch 4 of fold 5 | Loss: 1.3786 | Duration: 45.52s
+    Epoch 5 of fold 5 | Loss: 1.3784 | Duration: 45.03s
+    Epoch 6 of fold 5 | Loss: 1.3787 | Duration: 45.21s
+    Epoch 7 of fold 5 | Loss: 1.3786 | Duration: 45.18s
+    Epoch 8 of fold 5 | Loss: 1.3786 | Duration: 45.06s
+    Epoch 9 of fold 5 | Loss: 1.3786 | Duration: 45.77s
+    Epoch 10 of fold 5 | Loss: 1.3786 | Duration: 45.14s
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.    
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+  Fold 5 completed | Accuracy: 0.2532 | Duration: 457.44s
+Iteration 3 - accuracy: 0.2843 ± 0.0183
+Iteration 3 - precision: 0.2554 ± 0.1728
+Iteration 3 - recall: 0.2843 ± 0.0183
+Iteration 3 - f1_score: 0.1526 ± 0.0240
+Model saved as fNIRS_GNNLSTM_Model_3.pth
+Confusion matrix saved as fNIRS_ConfMatrix_Model_3.png
+Metrics saved as fNIRS_Metrics_Model_3.txt
+
+Iteration 3 completed in 2296.25 seconds.
+
+
+===============================
+ML Models (WithTime) Dataset:
+===============================
+
+RandomForest Classifier (WithTime) Report:
+              precision    recall  f1-score   support
+
+           0       0.83      0.90      0.86       373
+           1       0.88      0.84      0.86       365
+           2       0.88      0.85      0.87       248
+           4       0.85      0.83      0.84       405
+
+    accuracy                           0.86      1391
+   macro avg       0.86      0.86      0.86      1391
+weighted avg       0.86      0.86      0.86      1391
+
+
+GradientBoosting Classifier (WithTime) Report:
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+              precision    recall  f1-score   support
+
+           0       0.95      0.93      0.94       373
+           1       0.91      0.85      0.88       365
+           2       0.86      0.92      0.89       248
+           3       0.00      0.00      0.00         0
+           4       0.89      0.91      0.90       405
+
+    accuracy                           0.90      1391
+   macro avg       0.72      0.72      0.72      1391
+weighted avg       0.91      0.90      0.90      1391
+
+
+SVM Classifier (WithTime) Report:
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+              precision    recall  f1-score   support
+
+           0       0.46      0.47      0.47       373
+           1       0.46      0.43      0.45       365
+           2       0.58      0.56      0.57       248
+           3       0.00      0.00      0.00         0
+           4       0.46      0.49      0.48       405
+
+    accuracy                           0.48      1391
+   macro avg       0.39      0.39      0.39      1391
+weighted avg       0.48      0.48      0.48      1391
+
+
+KNN Classifier (WithTime) Report:
+              precision    recall  f1-score   support
+
+           0       0.61      0.64      0.62       373
+           1       0.62      0.67      0.64       365
+           2       0.56      0.62      0.59       248
+           4       0.64      0.53      0.58       405
+
+    accuracy                           0.61      1391
+   macro avg       0.61      0.61      0.61      1391
+weighted avg       0.61      0.61      0.61      1391
+
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\linear_model\_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html        
+Please also refer to the documentation for alternative solver options:    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+LogisticRegression Classifier (WithTime) Report:
+              precision    recall  f1-score   support
+
+           0       0.32      0.33      0.33       373
+           1       0.29      0.23      0.26       365
+           2       0.25      0.10      0.15       248
+           4       0.32      0.50      0.39       405
+
+    accuracy                           0.31      1391
+   macro avg       0.30      0.29      0.28      1391
+weighted avg       0.30      0.31      0.30      1391
+
+
+XGBoost Classifier (WithTime) Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.94      0.95       373
+           1       0.97      0.93      0.95       365
+           2       0.92      0.94      0.93       248
+           4       0.92      0.95      0.93       405
+
+    accuracy                           0.94      1391
+   macro avg       0.94      0.94      0.94      1391
+weighted avg       0.94      0.94      0.94      1391
+
+
+MLP Classifier (WithTime) Report:
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+              precision    recall  f1-score   support
+
+           0       0.63      0.64      0.63       373
+           1       0.68      0.63      0.65       365
+           2       0.74      0.71      0.72       248
+           4       0.64      0.68      0.66       405
+           5       0.00      0.00      0.00         0
+
+    accuracy                           0.66      1391
+   macro avg       0.54      0.53      0.53      1391
+weighted avg       0.66      0.66      0.66      1391
+
+
+===============================
+ML Models (WithoutTime) Dataset:
+===============================
+
+RandomForest Classifier (WithoutTime) Report:
+              precision    recall  f1-score   support
+
+           0       0.75      0.75      0.75       373
+           1       0.82      0.74      0.78       365
+           2       0.88      0.71      0.79       248
+           4       0.69      0.83      0.75       405
+
+    accuracy                           0.76      1391
+   macro avg       0.78      0.76      0.77      1391
+weighted avg       0.77      0.76      0.76      1391
+
+
+GradientBoosting Classifier (WithoutTime) Report:
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+              precision    recall  f1-score   support
+
+           0       0.75      0.72      0.73       373
+           1       0.77      0.70      0.73       365
+           2       0.78      0.70      0.74       248
+           3       0.00      0.00      0.00         0
+           4       0.67      0.79      0.72       405
+
+    accuracy                           0.73      1391
+   macro avg       0.59      0.58      0.59      1391
+weighted avg       0.74      0.73      0.73      1391
+
+
+SVM Classifier (WithoutTime) Report:
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py:1517: UndefinedMetricWarning: Recall is ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+              precision    recall  f1-score   support
+
+           0       0.44      0.46      0.45       373
+           1       0.46      0.43      0.44       365
+           2       0.55      0.50      0.52       248
+           3       0.00      0.00      0.00         0
+           4       0.45      0.49      0.47       405
+           5       0.00      0.00      0.00         0
+
+    accuracy                           0.47      1391
+   macro avg       0.32      0.31      0.31      1391
+weighted avg       0.47      0.47      0.47      1391
+
+
+KNN Classifier (WithoutTime) Report:
+              precision    recall  f1-score   support
+
+           0       0.25      0.27      0.26       373
+           1       0.25      0.25      0.25       365
+           2       0.19      0.24      0.21       248
+           4       0.31      0.23      0.26       405
+
+    accuracy                           0.25      1391
+   macro avg       0.25      0.25      0.25      1391
+weighted avg       0.26      0.25      0.25      1391
+
+C:\Users\Owner\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\linear_model\_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html        
+Please also refer to the documentation for alternative solver options:    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+
+LogisticRegression Classifier (WithoutTime) Report:
+              precision    recall  f1-score   support
+
+           0       0.33      0.19      0.24       373
+           1       0.31      0.27      0.29       365
+           2       0.22      0.08      0.11       248
+           4       0.32      0.60      0.42       405
+
+    accuracy                           0.31      1391
+   macro avg       0.29      0.29      0.27      1391
+weighted avg       0.30      0.31      0.28      1391
+
+
+XGBoost Classifier (WithoutTime) Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.77      0.78       373
+           1       0.88      0.77      0.82       365
+           2       0.87      0.80      0.83       248
+           4       0.71      0.85      0.78       405
+
+    accuracy                           0.80      1391
+   macro avg       0.81      0.80      0.80      1391
+weighted avg       0.81      0.80      0.80      1391
+
+
+
+MLP Classifier (WithoutTime) Report:
+              precision    recall  f1-score   support
+
+           0       0.60      0.53      0.57       373
+           1       0.64      0.58      0.61       365
+           2       0.62      0.62      0.62       248
+           4       0.57      0.67      0.61       405
+
+    accuracy                           0.60      1391
+   macro avg       0.61      0.60      0.60      1391
+weighted avg       0.60      0.60      0.60      1391
+
+PS C:\Code\ML Practice> 
